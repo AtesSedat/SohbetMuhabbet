@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Fragments.CreateNewRoomFragment">
+
+
+    <TextView
+            android:text="Yeni Sohbet Odası"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textView3" android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/etRoomName" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+    <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etRoomName"
+            app:layout_constraintEnd_toStartOf="@+id/tvSeviye" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@+id/etRoomName"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSeviye" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etRoomName" app:layout_constraintEnd_toEndOf="@+id/etRoomName"
+            app:layout_constraintStart_toEndOf="@+id/seekBar"
+            android:layout_marginStart="8dp"/>
+    <Button
+            android:text="Oluştur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRoomCreate" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSeviye" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/btnRoomClose"
+            android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+    <Button
+            android:text="Kapat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRoomClose" app:layout_constraintEnd_toStartOf="@+id/btnRoomCreate"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+</android.support.constraint.ConstraintLayout>
+
